@@ -64,7 +64,7 @@
                 <img height = "100px" src="img/learnhowtodj_article.png" alt="Serviico DJ"/>
 
                 <h2>Tablas</h2>
-                <table>
+                <table border="1">
                     <thead>
                         <tr>
                             <th>Cliente</th>
@@ -75,30 +75,90 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Juan</td>
-                            <td>Grande</td>
+                            <!-- rowspan: la celda ocupa en este caso dos espacios en fila -->
+                            <td rowspan="2">Juan</td>
+                            <td rowspan="2">Grande</td>
                             <td>Banda en Vivo</td>
-                            <td>$2000000</td>
+                            <td rowspan="2">$2000000</td>
                         </tr>
                         <tr>
+                            <td>Animador</td>
+                        </tr>
+                        <tr>
+                            
+                            <!-- unir celdas en columnas -->
                             <td>Maria</td>
-                            <td>Normal</td>
-                            <td>Sónido</td>
-                            <td>$1000000</td>
+                            <td colspan="2">Normal - Sónido</td>
+                            <td>$1000000</td> 
+
                         </tr>
                         
                     </tbody>
                     <tfoot>
 
                     </tfoot>
-
-
                 </table>
+                <br/>
+                <h2>Formulario</h2>
+                <form action="#" method="post">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha"> 
+                    <br><br>
+                    <label for="cliente">Cliente</label>
+                    <!-- <input type="text" name="Cliente" value="juan"/> -->
+                    <input required type="text" name="Cliente" placeholder="Escriba su nombre" />
+                    <br><br>
+                    <label for="cantidad_meseros">Meseros Extras</label>
+                    <input type="number" name="cantidad_meseros" placeholder="Número de meseros"> 
+                    <br><br>
+                    <input type="radio" name="salon" value="N"> Normal
+                    <input type="radio" name="salon" value="G"> Grande
+                    <br><br>
+                    <input type="checkbox" name="servicios[]" value="1"> Animador
+                    <input type="checkbox" name="servicios[]" value="2"> Sónido
+                    <input type="checkbox" name="servicios[]" value="3"> Dj
+                    <input type="checkbox" name="servicios[]" value="4"> Banda en Vivo
+                    <input type="checkbox" name="servicios[]" value="5"> Organizador
+                    <br><br>
+                    <label for="vino">Tipo de Vino</label>
+                    <select name="vino">
+                        <option value="-1">Seleccione el tipo de vino</option>
+                        <option value="1">Tinto</option>
+                        <option value="2">Rose</option>
+                        <option value="3">Blanco</option>
+                        <option value="4">Espumoso</option>
+                    </select>
+                    <br><br>
+                    <label for="observaciones">Observaciones</label>
+                    <textarea name="observaciones" cols="30" rows="10"></textarea>
+                    <br><br>
+                    <input type="button" value="Boton">
+                    <button type="button">Botón</button>
+                    <br><br>
+                    <input type="reset" value="Resetear">
+                    <button type="reset">Resetear</button>
+                    <br><br>
+                    <input type="submit" value="Enviar">
+                    <button>Enviar</button> 
+                    
+                </form>
         </main>
         <footer>
             <!-- pié de página  -->
         </footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
         <!-- todas las etiquetas de contenido -->
         <!-- esto si lo veo en la página  -->
         
     </body>
+
+    </html>
